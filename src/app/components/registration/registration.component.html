@@ -15,7 +15,9 @@
             <div class="title">
                 <h2>Create your Fundoo Account</h2>
             </div>
-            <div class="firstandlastname">
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <div class="firstandlastname"  fxLayout="row" fxLayoutGap="20px" fxLayout.xs="column">
+              
                 <mat-form-field appearance="outline">
                     <mat-label>First name</mat-label>
                     <input type="text" formControlName="firstName" matInput placeholder="First name">
@@ -40,7 +42,7 @@
                 <span jsname="V67aGc" class="VfPpkd-vQzf8d">Create a new Gmail address instead</span>
             </div>
 
-            <div class="passwordandconfirm">
+            <div class="passwordandconfirm" fxLayout="row" fxLayoutGap="20px">
 
                 <mat-form-field appearance="outline">
                     <mat-label>Password</mat-label>
@@ -52,7 +54,7 @@
                 <mat-form-field appearance="outline">
                     <mat-label>Confirm</mat-label>
                     <input type="text" formControlName="confirm" matInput placeholder="confirm">
-                    <!-- <mat-error>Enter first name</mat-error> -->
+                     <mat-error>confirm password</mat-error>
                 </mat-form-field>
 
             </div>
@@ -65,15 +67,14 @@
 
                 <button class="button2">Next</button>
             </div>
+        </form>
         </div>
+       
     </div>
-    <div class="rightdiv">
-        <div class="imageandpara">
-
-            <img class="image" src="../../../assets/account.svg" alt="">
-           <div class="para" >
-            One account. All of Google working for you.
-        </div>
-        </div>
+    <div class="rightdiv" fxHide.xs>
+         <img class="image" src="../../../assets/account.svg" alt="">
+            <div class="para" >
+            <p>One account. All of Google <br><br>working for you.</p>
+            </div>
     </div>
 </div>

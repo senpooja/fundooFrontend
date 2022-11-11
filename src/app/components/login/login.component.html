@@ -16,20 +16,21 @@
         <div class="title1">
             <p>Use your Fundoo Account</p>
         </div>
+        <form [formGroup]="signinForm" (ngSubmit)="onSubmit()">
         <div class="Phoneoremail">
 
             <mat-form-field appearance="outline">
                 <mat-label>Email or phone number</mat-label>
-                <input type="text" formControlName="Email" matInput placeholder="Email">
-                <mat-error>Enter a valid password </mat-error>
+                <input type="text" formControlName="email" matInput placeholder="email">
+                <mat-error>Enter a valid Email </mat-error>
             </mat-form-field>
 
         </div>
         <div class="conformpassword">
 
             <mat-form-field appearance="outline">
-                <mat-label> password</mat-label>
-                <input type="text" formControlName=" password" matInput placeholder="password">
+                <mat-label>password</mat-label>
+                <input type="text" formControlName="password" matInput placeholder="password">
                 <mat-error>Enter a valid password</mat-error>
             </mat-form-field>
 
@@ -49,5 +50,7 @@
             <button class="button3">Create Account</button>
             <button fxLayout.xs="row" class="button4">Next</button>
         </div>
-    </div>
+    </form>
+   
+</div>
 </div>
