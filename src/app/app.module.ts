@@ -7,6 +7,7 @@ import { MatInputModule } from '@angular/material/input';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -33,7 +34,8 @@ import { DemoComponent } from './components/demo/demo.component';
     MatInputModule,
     MatCheckboxModule,
     ReactiveFormsModule,
-    FlexLayoutModule 
+    FlexLayoutModule,
+    HttpClientModule
 
   ],
   providers: [],
