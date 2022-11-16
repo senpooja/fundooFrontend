@@ -9,11 +9,8 @@ import {ChangeDetectorRef} from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
   mobileQuery: MediaQueryList;
-
- 
   private _mobileQueryListener: () => void;
-
-  constructor(media: MediaMatcher,changeDetectorRef: ChangeDetectorRef) {
+constructor(media: MediaMatcher,changeDetectorRef: ChangeDetectorRef) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
@@ -26,6 +23,4 @@ export class DashboardComponent implements OnInit {
     this.mobileQuery.removeListener(this._mobileQueryListener);
   }
   shouldRun = /(^|.)(stackblitz|webcontainer).(io|com)$/.test(window.location.host);
-
-
 }
