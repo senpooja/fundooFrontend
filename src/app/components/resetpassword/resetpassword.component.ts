@@ -10,14 +10,19 @@ import { UserService } from 'src/app/services/userservices/user.service';
 export class ResetpasswordComponent implements OnInit {
   reset!: FormGroup;
   submitted = false;
+  token :any;
 
-  constructor(private formBuilder: FormBuilder, private user: UserService) { }
+  constructor(private formBuilder: FormBuilder, private user: UserService) { 
+
+  }
 
   ngOnInit(): void {
     this.reset = this.formBuilder.group({
       newpassword: ['', [Validators.required,]],
       conformpassword: ['', Validators.required, ],
     })
+ // this.token = this.activeRoute.snapshot.paramMap.get('token');
+    
   }
   onSubmit() {
    // this.reset = true;
@@ -28,9 +33,9 @@ export class ResetpasswordComponent implements OnInit {
         service: "advance"
 
       }
-      this.user.login(payload).subscribe((Response: any) => {
+     // this.user.login(payload, token).subscribe((Response: any) => {
         console.log(Response)
-      })
+      //})
  }
     
   }

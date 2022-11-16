@@ -21,6 +21,7 @@ export class ForgetpasswordComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
     })
     
+    
   }
   onSubmit() {
     this.submitted = true;
@@ -31,6 +32,7 @@ export class ForgetpasswordComponent implements OnInit {
         service: "advance"
 
       }
+      console.log(payload);
       this.user.forgetpassword(payload).subscribe((Response: any) => {
         console.log(Response)
       })
