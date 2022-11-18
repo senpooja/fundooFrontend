@@ -6,6 +6,10 @@ import { ForgetpasswordComponent } from './components/forgetpassword/forgetpassw
 import { LoginComponent } from './components/login/login.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { ResetpasswordComponent } from './components/resetpassword/resetpassword.component';
+import { CreatenoteComponent } from './components/createnote/createnote.component';
+import { GetallnotesComponent } from './components/getallnotes/getallnotes.component';
+import { IconsComponent } from './components/icons/icons.component';
+import { DisplayComponent } from './components/display/display.component';
 
 const routes: Routes = [
 {path : 'register', component:RegistrationComponent},
@@ -13,7 +17,13 @@ const routes: Routes = [
 {path : 'forgetpassword', component:ForgetpasswordComponent},
 {path : 'resetpassword', component:ResetpasswordComponent},
 {path : 'demo', component:DemoComponent},
-{path : 'dashboard', component:DashboardComponent}
+{path:'dashboard',
+component:DashboardComponent,
+children:[
+  {path:'getallnotes',component:GetallnotesComponent}
+]
+}
+
 
 
 ];

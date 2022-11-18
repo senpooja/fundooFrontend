@@ -1,0 +1,40 @@
+<div class="OuterDiv">
+
+    <div class="InnerDiv">
+        <div fxLayout="row" fxLayoutAlign="none end"  *ngIf="Show"   >
+            <input class="search" formControlName="title" placeholder="Title">
+            <img class="pin"  src="../../../assets/push_pin_FILL0_wght400_GRAD0_opsz48.svg">
+        </div>
+        <div *ngIf="!Show || Show" (click)="isshow()"fxLayout="row" fxLayoutAlign="space-between center">
+            <input class="mySearch" formControlName="description" placeholder="Take a note...">
+            <div class="img" *ngIf="!Show" >
+                <img  src="../../../assets/check_box_black_24dp.svg">
+                <img  src="../../../assets/brush_black_24dp.svg">
+                <img  src="../../../assets/insert_photo_black_24dp.svg">
+            </div>
+        </div>
+        <div class="img" *ngIf="!Show" >
+           
+        </div>
+        <div *ngIf="Show" fxlayout="row" fxlayout="40px">
+            <div class="Images" fxlayout="row" fxlayout="20px">
+                <img class="images"> <img type="image"
+                    src="../../../assets/notifications_FILL0_wght400_GRAD0_opsz48 (1).svg" height="18px" width="18px">
+                <img class="images"> <img type="image" src="../../../assets/group_add_black_24dp.svg" height="18px"
+                    width="18px">
+                <img class="images"> <img type="image" src="../../../assets/palette_black_24dp.svg" height="18px"
+                    width="18px">
+                <img class="images"> <img type="image" src="../../../assets/insert_photo_black_24dp.svg" height="18px"
+                    width="18px">
+                <img class="images"> <img type="image" src="../../../assets/archive_black_24dp.svg" height="18px"
+                    width="18px">
+                <img class="images"> <img type="image" src="../../../assets/more_vert_black_24dp.svg" height="18px"
+                    width="18px">
+                   
+            </div>
+            <div class="close">
+                <button class="button1"(click)="close()">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

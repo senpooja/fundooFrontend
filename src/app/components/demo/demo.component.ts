@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./demo.component.scss']
 })
 export class DemoComponent implements OnInit {
-
+  Show = false;
+  title: any;
+  description: any;
+  panelOpenState = false;
   constructor() { }
 
   ngOnInit(): void {
+    //this.createnoteForm = this.formBuilder.group({
+     }
   }
 
-}

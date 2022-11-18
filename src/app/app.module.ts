@@ -25,6 +25,10 @@ import { ForgetpasswordComponent } from './components/forgetpassword/forgetpassw
 import { ResetpasswordComponent } from './components/resetpassword/resetpassword.component';
 import { DemoComponent } from './components/demo/demo.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { CreatenoteComponent } from './components/createnote/createnote.component';
+import { DisplayComponent } from './components/display/display.component';
+import { GetallnotesComponent } from './components/getallnotes/getallnotes.component';
+import { IconsComponent } from './components/icons/icons.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +38,11 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     ForgetpasswordComponent,
     ResetpasswordComponent,
     DemoComponent,
-    DashboardComponent
+    DashboardComponent,
+    CreatenoteComponent,
+    DisplayComponent,
+    GetallnotesComponent,
+    IconsComponent
   ],
   imports: [
     BrowserModule,
