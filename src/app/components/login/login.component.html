@@ -1,5 +1,5 @@
-<div class="section">
-    <div fxLayout="column" fxLayoutAlign="space-evenly center">
+<div class="section" >
+    <div fxLayout="column" fxLayoutAlign="space-evenly center" >
         <div class="heading">
             <p class="color1">F</p>
             <p class="color2">u</p>
@@ -15,7 +15,7 @@
             <p>Use your Fundoo Account</p>
         </div>
         <form [formGroup]="signinForm" (ngSubmit)="onSubmit()">
-            <div class="Phoneoremail">
+            <div class="Phoneoremail" fxFlex.xl="50px">
                 <mat-form-field appearance="outline">
                     <mat-label>Email or phone number</mat-label>
                     <input type="text" formControlName="email" matInput placeholder="email">
@@ -39,8 +39,8 @@
                 <button class="button2">Learn more</button>
             </div>
             <div class="createaccountandnextbutton">
-                <button class="button3">Create Account</button>
-                <button fxLayout.xs="row" class="button4">Next</button>
+                <button class="button3" class="btn-property" routerLink="/register">Create Account</button>
+                <button fxLayout.xs="row" class="button4" >Next</button>
             </div>
         </form>
     </div>

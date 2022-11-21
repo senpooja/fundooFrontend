@@ -1,6 +1,7 @@
 import { HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/userservices/user.service';
 
 @Component({
@@ -12,7 +13,7 @@ export class LoginComponent implements OnInit {
   signinForm!: FormGroup;
   submitted = false;
 
-  constructor(private formBuilder: FormBuilder, private user: UserService) { }
+  constructor(private formBuilder: FormBuilder, private user: UserService,private router : Router) { }
 
   ngOnInit(): void {
     this.signinForm = this.formBuilder.group({
@@ -33,6 +34,8 @@ export class LoginComponent implements OnInit {
       this.user.login(payload).subscribe((response: any) => {
         console.log(response)
         localStorage.setItem("token",response.data)
+        this.router.navigateByUrl('/dashboard/getallnotes')
+        
       })
  }
   }

@@ -1,5 +1,4 @@
-<div class="example-container">
-    <div class="example-container2" [class.example-is-mobile]="mobileQuery.matches" *ngIf="shouldRun"></div>
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
     <mat-toolbar class="example-toolbar">
         <button mat-icon-button (click)="snav.toggle()">
             <mat-icon>menu</mat-icon>
@@ -12,7 +11,7 @@
         <div class="nosubmit">
             <input class="nosubmit" type="search" placeholder="Search...">
         </div>
-        <div class="cyDiv" fxLayout="row" fxLayoutGap="20px">
+        <div class="cyDiv">
             <div>
                 <img type="image" src="../../../assets/refresh_FILL0_wght400_GRAD0_opsz48.svg" height="26px"
                     width="26px">
@@ -26,7 +25,7 @@
                     width="26px">
             </div>
         </div>
-        <div class="appimage" fxLayout="row" fxLayoutGap="30px">
+        <div class="appimage">
             <img type="image" src="../../../assets/apps_FILL0_wght400_GRAD0_opsz48.svg" height="30px" width="30px">
 
             <img type="image" src="../../../assets/account_circle_FILL0_wght400_GRAD0_opsz48.svg" height="28px"

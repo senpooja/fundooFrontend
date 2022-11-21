@@ -17,10 +17,9 @@ constructor(media: MediaMatcher,changeDetectorRef: ChangeDetectorRef) {
    }
 
   ngOnInit(): void {
+    this.mobileQuery.removeListener(this._mobileQueryListener);
    
   }
-  ngOnDestroy(): void {
-    this.mobileQuery.removeListener(this._mobileQueryListener);
-  }
-  shouldRun = /(^|.)(stackblitz|webcontainer).(io|com)$/.test(window.location.host);
+
+ 
 }

@@ -166,6 +166,10 @@
 .createaccountandnextbutton{
    
     position: relative;
+    display: flex;
+    direction: row;
+    justify-content: space-between;
+    
     left: 70%;
     width: 100%;
     
@@ -177,9 +181,9 @@
 }
 .button3{
     
-    color: var(--gm-colortextbutton-ink-color,#1a73e8);
-    font-family: "Google Sans",Roboto,Arial,sans-serif;
-    background-color: transparent;
+    //color: var(--gm-colortextbutton-ink-color,#1a73e8);
+    //font-family: "Google Sans",Roboto,Arial,sans-serif;
+    //background-color: transparent;
     position: relative;
     right: 3%;
     font-size: .875rem;
@@ -221,7 +225,7 @@
     left: 38%;
     
     background-color: var(--gm-colortextbutton-ink-color,#1a73e8);
-    color: white;
+    color: var(--gm-colortextbutton-ink-color,#1a73e8);
     border-radius: 6px;
     width: 22%;
     height: 180%;
@@ -231,4 +235,20 @@
     text-transform: none;
     cursor: pointer;
     border: none;
+}
+.btn-property {
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 1rem;
+    color: var(--gm-colortextbutton-ink-color, #1a73e8);
+  //  margin-left: -34px;
+  //  margin-right: 115px;
+  //  margin-left: -22px;
+   // margin-right: 98px;
+   // margin-top: 5px;
+}
+.dashboard{
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 1rem;
+    color: var(--gm-colortextbutton-ink-color, #1a73e8);
+
 }

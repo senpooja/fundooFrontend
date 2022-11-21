@@ -16,7 +16,8 @@ export class HttpService {
    
 
   }
-  getservic(){
+  getservic(url:string,token:boolean=false,httpoptions:any){
+    return this.httpclient.get(this.baseUrl+url, token && httpoptions)
 
   }
   putservic(){
