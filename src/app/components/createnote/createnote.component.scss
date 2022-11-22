@@ -1,12 +1,12 @@
 .OuterDiv {
-  width: 600px;
+  width: 500px;
 
-  margin:32px auto 16px auto;
+  margin:30px auto 10px auto;
 }
 
 .InnerDiv {
  // border: 1px solid rgb(186, 184, 184);
-  padding: 10px 25px;
+  padding: 8px 20px;
   border-radius: 8px;
   box-sizing: border-box;
   box-shadow: 0 3px 3px 3px rgb(222, 222, 222);
@@ -54,17 +54,12 @@
   padding-bottom: 35px;
   //margin-left: 70%;
 }
-.img{
-  display: flex;
-  justify-content: flex-end;
-  width: 20px;
-  height: 25px;
 
-}
 
 .ic {
  display: flex;
   flex-direction:row;
+
 
 
 }
@@ -85,7 +80,7 @@ white-space: 50px;
 }
 .close {
   display: flex;
-  align-items:flex-end;
+  //align-items:flex-end;
   padding: 8px 190px;
   padding: 8px 70px;
   margin-left: 70%;
@@ -102,5 +97,6 @@ white-space: 50px;
   text-transform: none;
   cursor: pointer;
   border: none;
+  margin-top: 50%;
 
 }

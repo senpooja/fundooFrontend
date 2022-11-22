@@ -1,2 +1,39 @@
 
+<!-- <div fxLayout="row wrap" fxLayoutGap="10px grid" style="padding-top: 2%; padding-left: 10%;">
+    <div *ngFor="let note of NoteList">
+      
+      
+        <div class="box">
+        <mat-card-title style="font-size: 20px;">{{note.title}} </mat-card-title>
 
+       
+
+        <p>{{note.note}}</p>
+
+    </div>
+    </div>
+</div> -->
+
+<div fxLayout="row wrap" fxLayoutGap="10px grid" style="padding-top: 2%; padding-left: 10%;">
+    <div *ngFor="let note of NoteList">
+        <mat-card class="card">
+
+            <img class="pin"  src="../../../assets/push_pin_FILL0_wght400_GRAD0_opsz48.svg">
+            <mat-card-title style="padding:8px;" fxlayout="row">
+            
+                {{note.title}} 
+            </mat-card-title>
+          
+
+            <mat-card-content>
+                <p style="padding:8px;" ></p>
+            </mat-card-content>
+
+            <div class="icondiv" FxLayoutAlign="space-between centre" > <p>{{note.note}}</p>
+                
+                <app-icons></app-icons>
+
+            </div>
+        </mat-card>
+    </div>
+ </div>

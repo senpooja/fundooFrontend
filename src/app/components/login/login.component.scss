@@ -171,12 +171,12 @@
     justify-content: space-between;
     
     left: 70%;
-    width: 100%;
+    width: 90%;
     
     top: -25%;
     font-size: 14px;
     height: 20px;
-    padding: 6px 8px;
+    padding: 4px 6px;
     margin: 2px;
 }
 .button3{
@@ -224,8 +224,8 @@
     position: relative;
     left: 38%;
     
-    background-color: var(--gm-colortextbutton-ink-color,#1a73e8);
-    color: var(--gm-colortextbutton-ink-color,#1a73e8);
+    background-color: var(--gm-colortextbutton-ink-color,#4582d2);
+   color: var(--gm-colortextbutton-ink-color,#f5f7fa);
     border-radius: 6px;
     width: 22%;
     height: 180%;
@@ -236,16 +236,7 @@
     cursor: pointer;
     border: none;
 }
-.btn-property {
-    font-family: Roboto, Arial, sans-serif;
-    font-size: 1rem;
-    color: var(--gm-colortextbutton-ink-color, #1a73e8);
-  //  margin-left: -34px;
-  //  margin-right: 115px;
-  //  margin-left: -22px;
-   // margin-right: 98px;
-   // margin-top: 5px;
-}
+
 .dashboard{
     font-family: Roboto, Arial, sans-serif;
     font-size: 1rem;

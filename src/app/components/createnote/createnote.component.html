@@ -18,26 +18,15 @@
 
             </div>
             <div *ngIf="Show">
-                <div class="Images" fxlayout="20px">
-                    <img class="images"> <img type="image"
-                        src="../../../assets/notifications_FILL0_wght400_GRAD0_opsz48 (1).svg" height="20px"
-                        width="25px">
-                    <img class="images"> <img type="image" src="../../../assets/group_add_black_24dp.svg" height="20px"
-                        width="25px">
-                    <img class="images"> <img type="image" src="../../../assets/palette_black_24dp.svg" height="20px"
-                        width="25px">
-                    <img class="images"> <img type="image" src="../../../assets/insert_photo_black_24dp.svg"
-                        height="20px" width="25px">
-                    <img class="images"> <img type="image" src="../../../assets/archive_black_24dp.svg" height="20px"
-                        width="25px">
-                    <img class="images"> <img type="image" src="../../../assets/more_vert_black_24dp.svg" height="20px"
-                        width="25px">
-
+            
+                <div>
+                    <app-icons></app-icons>
                 </div>
                 <div class="close">
                     <button class="button1" (click)="close()">Close</button>
                 </div>
             </div>
+           
         </form>
     </div>
 

@@ -10,17 +10,20 @@ import { CreatenoteComponent } from './components/createnote/createnote.componen
 import { GetallnotesComponent } from './components/getallnotes/getallnotes.component';
 import { IconsComponent } from './components/icons/icons.component';
 import { DisplayComponent } from './components/display/display.component';
+import { AuthenticationGuard } from './authentication.guard';
 
 const routes: Routes = [
 {path : 'register', component:RegistrationComponent},
+{ path: '', redirectTo: "/login", pathMatch: 'full' },
 {path : 'login', component:LoginComponent},
 {path : 'forgetpassword', component:ForgetpasswordComponent},
 {path : 'resetpassword', component:ResetpasswordComponent},
 {path : 'demo', component:DemoComponent},
 {path:'dashboard',
-component:DashboardComponent,
+component:DashboardComponent,canActivate:[AuthenticationGuard],
 children:[
-  {path:'getallnotes',component:GetallnotesComponent}
+  {path:'getallnotes',component:GetallnotesComponent},
+
 ]
 }
 
