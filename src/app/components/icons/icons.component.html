@@ -23,8 +23,16 @@
     </div>
     <div role="button" class="add">
 
-        <div class ="MoreItem">
+        <div class ="MoreItem"  mat-icon-button matTooltip="More" [matMenuTriggerFor]="menu">
             <img class="divImg" src="../../../assets/more_vert_black_24dp.svg">
+            <mat-menu #menu="matMenu" >
+                <button mat-menu-item>Delet note</button>
+                <button mat-menu-item>Add label</button>
+                <button mat-menu-item>Add drawing</button>
+                <button mat-menu-item>make a copy</button>
+                <button mat-menu-item>Show checkboxes</button>
+                <button mat-menu-item>copy to google Docs</button>
+            </mat-menu>
         </div>
     </div>
 

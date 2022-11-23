@@ -15,6 +15,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatCardModule} from '@angular/material/card';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatMenuModule} from '@angular/material/menu';
+
 
 import { AuthguradServicedService } from './services/authgurad-serviced.service';
 
@@ -32,6 +35,9 @@ import { CreatenoteComponent } from './components/createnote/createnote.componen
 import { DisplayComponent } from './components/display/display.component';
 import { GetallnotesComponent } from './components/getallnotes/getallnotes.component';
 import { IconsComponent } from './components/icons/icons.component';
+import { ArchiveComponent } from './components/archive/archive.component';
+import { TrashComponent } from './components/trash/trash.component';
+
 
 
 
@@ -47,7 +53,9 @@ import { IconsComponent } from './components/icons/icons.component';
     CreatenoteComponent,
     DisplayComponent,
     GetallnotesComponent,
-    IconsComponent
+    IconsComponent,
+    ArchiveComponent,
+    TrashComponent
   ],
   imports: [
     BrowserModule,
@@ -64,7 +72,9 @@ import { IconsComponent } from './components/icons/icons.component';
     MatToolbarModule,
     MatIconModule,
     MatExpansionModule,
-    MatCardModule
+    MatCardModule,
+    MatDialogModule,
+    MatMenuModule
     
 
   ],

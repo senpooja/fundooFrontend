@@ -11,6 +11,7 @@ import { GetallnotesComponent } from './components/getallnotes/getallnotes.compo
 import { IconsComponent } from './components/icons/icons.component';
 import { DisplayComponent } from './components/display/display.component';
 import { AuthenticationGuard } from './authentication.guard';
+import { UpdatenoteComponent } from './components/updatenote/updatenote.component';
 
 const routes: Routes = [
 {path : 'register', component:RegistrationComponent},
@@ -23,6 +24,8 @@ const routes: Routes = [
 component:DashboardComponent,canActivate:[AuthenticationGuard],
 children:[
   {path:'getallnotes',component:GetallnotesComponent},
+  {path:'UpdatenoteComponent',component:UpdatenoteComponent}
+
 
 ]
 }
