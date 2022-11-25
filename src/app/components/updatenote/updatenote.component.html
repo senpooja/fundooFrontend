@@ -1,4 +1,17 @@
-<p>Notes</p>
-<p>description</p>
+<div class="input">
+    <div class="note">
 
-<img class="delet" src="../../../assets/delete_FILL0_wght400_GRAD0_opsz48.svg">
+        <div  class="mat-title" fxLayout="row" fxLayoutAlign="space-between center">
+            <input matInput [(ngModel)]="title" placeholder="Title" >
+        </div>
+
+        <div class="mat-title" fxLayout="row" fxLayoutAlign="space-between center">
+            <input matInput  [(ngModel)]="discription" placeholder="Description">
+        </div>
+        <app-icons></app-icons>
+        <div class="app">
+            <button mat-button class="button" (click)="closeDialog()">close</button>
+        </div>
+       
+    </div>
+</div>

@@ -6,6 +6,10 @@ import { HttpService } from '../httpservice/http.service';
   providedIn: 'root'
 })
 export class NotesService {
+  
+  Trash(req: { NotesId: any[]; }) {
+    throw new Error('Method not implemented.');
+  }
 
   token:any;
   constructor(private http:HttpService) {
@@ -36,6 +40,7 @@ export class NotesService {
 
   }
   updatenote(data:any){
+    console.log(data)
     let header={
       headers:new HttpHeaders({
         'Content-Type': 'application/json',
@@ -43,7 +48,46 @@ export class NotesService {
 
       })
     }
-    return this.http.putservic(`/Note/Update?noteId=+${data.noteId}`,data,true,header)
+    return this.http.putservic(`/Note/Update?noteId=${data.noteId}`,data,true,header)
+  }
+  trashnote(req:any){
+    console.log(req)
+    let header={
+
+      headers:new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' +this.token
+
+      })
+    }
+    return this.http.putservic(`/Note/Trash?NotesId=${req.NotesId}`,req,true,header)
+
+  }
+ Archiv(req:any){
+    console.log(req)
+    let header={
+
+      headers:new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' +this.token
+
+      })
+    }
+    return this.http.putservic(`/Note/Archive?NotesId=${req.NotesId}`,req,true,header)
+
+  }
+  changecColor(data:any){
+    console.log(data)
+    let header={
+
+      headers:new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' +this.token
+
+      })
+    }
+    return this.http.putservic(`/Note/Color?NoteId=${data.NotesId}&color=${data.color}`,data,true,header)
+
   }
   
 }

@@ -17,6 +17,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatCardModule} from '@angular/material/card';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatMenuModule} from '@angular/material/menu';
+import { FormsModule } from '@angular/forms';
+
 
 
 import { AuthguradServicedService } from './services/authgurad-serviced.service';
@@ -37,6 +39,7 @@ import { GetallnotesComponent } from './components/getallnotes/getallnotes.compo
 import { IconsComponent } from './components/icons/icons.component';
 import { ArchiveComponent } from './components/archive/archive.component';
 import { TrashComponent } from './components/trash/trash.component';
+import { UpdatenoteComponent } from './components/updatenote/updatenote.component';
 
 
 
@@ -55,7 +58,8 @@ import { TrashComponent } from './components/trash/trash.component';
     GetallnotesComponent,
     IconsComponent,
     ArchiveComponent,
-    TrashComponent
+    TrashComponent,
+    UpdatenoteComponent
   ],
   imports: [
     BrowserModule,
@@ -74,7 +78,8 @@ import { TrashComponent } from './components/trash/trash.component';
     MatExpansionModule,
     MatCardModule,
     MatDialogModule,
-    MatMenuModule
+    MatMenuModule,
+    FormsModule
     
 
   ],

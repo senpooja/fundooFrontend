@@ -1,8 +1,5 @@
-
-
-
 <div class="OuterDiv">
-    
+
 
     <div role="button" class="add">
         <img class="divImg" src="../../../assets/notifications_FILL0_wght400_GRAD0_opsz48 (1).svg">
@@ -11,22 +8,32 @@
         <img class="divImg" src="../../../assets/group_add_black_24dp.svg">
     </div>
 
-    <div role="button" class="add"  >
-        <img class="divImg" src="../../../assets//palette_black_24dp.svg">
-       
+    <div role="button" class="add">
+
+
+        <div role="button" class="add" [matMenuTriggerFor]="colormenu">
+            <img class="divImg" src="../../../assets//palette_black_24dp.svg">
+            <mat-menu #colormenu="matMenu" fxLayout="row " fxLayoutAlign="start space-between">
+                <div fxLayout="row wrap" class="color" fxLayoutAlign="start center">
+                    <div *ngFor="let color of colors" class="colorBox">
+                        <button class="colors" mat-mini-fab (click)="setcolor(color.code)" mat-icon-button
+                            mat-raised-button [style.background]="color.code"></button>
+                    </div>
+                </div>
+            </mat-menu>
+        </div>
     </div>
     <div role="button" class="add">
         <img class="divImg" src="../../../assets/insert_photo_black_24dp.svg">
     </div>
     <div role="button" class="add">
-        <img class="divImg" src="../../../assets/archive_black_24dp.svg">
+        <img class="divImg" src="../../../assets/archive_black_24dp.svg" (click)="archive()">
     </div>
     <div role="button" class="add">
-
-        <div class ="MoreItem"  mat-icon-button matTooltip="More" [matMenuTriggerFor]="menu">
+     <div class="MoreItem" mat-icon-button matTooltip="More" [matMenuTriggerFor]="menu">
             <img class="divImg" src="../../../assets/more_vert_black_24dp.svg">
-            <mat-menu #menu="matMenu" >
-                <button mat-menu-item>Delet note</button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item class="matmenuBtn" (click)="trash()">Delete note</button>
                 <button mat-menu-item>Add label</button>
                 <button mat-menu-item>Add drawing</button>
                 <button mat-menu-item>make a copy</button>

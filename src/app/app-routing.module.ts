@@ -12,6 +12,9 @@ import { IconsComponent } from './components/icons/icons.component';
 import { DisplayComponent } from './components/display/display.component';
 import { AuthenticationGuard } from './authentication.guard';
 import { UpdatenoteComponent } from './components/updatenote/updatenote.component';
+import { TrashComponent } from './components/trash/trash.component';
+import { ArchiveComponent } from './components/archive/archive.component';
+
 
 const routes: Routes = [
 {path : 'register', component:RegistrationComponent},
@@ -24,11 +27,14 @@ const routes: Routes = [
 component:DashboardComponent,canActivate:[AuthenticationGuard],
 children:[
   {path:'getallnotes',component:GetallnotesComponent},
-  {path:'UpdatenoteComponent',component:UpdatenoteComponent}
+  {path:'UpdatenoteComponent',component:UpdatenoteComponent},
+  {path:'trash', component:TrashComponent},
+  {path:'archiv',component:ArchiveComponent},
 
 
 ]
 }
+
 
 
 
