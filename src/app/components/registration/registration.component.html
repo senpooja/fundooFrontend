@@ -1,6 +1,7 @@
 <div class="section">
-    <div class="form" FxLayout="column" fxFlex.sm="500px">
 
+    <div class="form" FxLayout="column" fxFlex.sm="500px">
+        <!-- <meta name="viewport" content="width=device-with", initial-scale="0.1"> -->
         <div fxLayout="column" fxLayoutAlign="space-evenly start">
 
             <div class="heading">
@@ -15,7 +16,7 @@
             <div class="title">
                 <h2>Create your Fundoo Account</h2>
             </div>
-            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" fxFlex.xs="900px">
                 <div class="firstandlastname" fxLayout="row" fxLayoutGap="20px">
                     <div>
                         <mat-form-field appearance="outline">

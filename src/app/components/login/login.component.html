@@ -1,4 +1,4 @@
-<div class="section" >
+<div class="section" fxFlex.xs="100px"  >
     <div fxLayout="column" fxLayoutAlign="space-evenly center" >
         <div class="heading">
             <p class="color1">F</p>
@@ -15,7 +15,7 @@
             <p>Use your Fundoo Account</p>
         </div>
         <form [formGroup]="signinForm" (ngSubmit)="onSubmit()">
-            <div class="Phoneoremail" fxFlex.xl="50px">
+            <div class="Phoneoremail" >
                 <mat-form-field appearance="outline">
                     <mat-label>Email or phone number</mat-label>
                     <input type="text" formControlName="email" matInput placeholder="email">

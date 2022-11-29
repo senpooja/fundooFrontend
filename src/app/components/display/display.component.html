@@ -1,5 +1,8 @@
-<div fxLayout="row wrap" fxLayoutGap="10px grid" style="padding-top: 2%; padding-left: 10%;">
-    <div *ngFor="let note of NoteList">
+<div  fxLayout="row wrap" fxLayoutGap="10px grid" style="padding-top: 2%; padding-left: 10%;">
+    <!-- <div *ngFor="let note of NoteList| filter : searchText"> -->
+        <div class="notes" *ngFor="let note of NoteList | searchpipe : Search ">
+           
+            <!-- <div class="filter" *ngif="SerchTital=== '' || note.title(SerchTital)"> -->
         <div appearance="fill" class="discard" >
         <mat-card class="card" [style.background]="note.color">
      
@@ -10,18 +13,19 @@
           
 
             <mat-card-content>
-                <p style="color: aquamarine;" (click)="openDialog(note)">{{note.note}}</p>
+                <p  (click)="openDialog(note)">{{note.note}}</p>
             </mat-card-content>
-       
+
 
             <div class="icondiv" FxLayoutAlign="space-between centre" > 
                 
-                <app-icons [notecard]="note" ></app-icons>
+                <app-icons [notecard]="note" (displaytoIcons)="receiveMsgIconsToDisplay($event)" ></app-icons>
 
             </div>
           
         
         </mat-card>
     </div>
+    
     </div>
 </div>

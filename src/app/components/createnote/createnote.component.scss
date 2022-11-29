@@ -1,7 +1,7 @@
 .OuterDiv {
   width: 500px;
 
-  margin:30px auto 10px auto;
+  margin:20px auto 5px auto;
 }
 
 .InnerDiv {
@@ -83,7 +83,7 @@ white-space: 50px;
   //align-items:flex-end;
   padding: 8px 190px;
   padding: 8px 70px;
-  margin-left: 70%;
+  margin-left: 28%;
   
 
 }
@@ -97,6 +97,10 @@ white-space: 50px;
   text-transform: none;
   cursor: pointer;
   border: none;
-  margin-top: 50%;
+  //margin-top: 40%;
 
+}
+.add{
+  display: flex;
+  direction: row;
 }

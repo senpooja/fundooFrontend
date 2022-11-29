@@ -1,10 +1,12 @@
 import { HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 import { HttpService } from '../httpservice/http.service';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class NotesService {
   
   Trash(req: { NotesId: any[]; }) {
@@ -86,7 +88,7 @@ export class NotesService {
 
       })
     }
-    return this.http.putservic(`/Note/Color?NoteId=${data.NotesId}&color=${data.color}`,data,true,header)
+    return this.http.putservic(`/Note/Color?NoteId=${data.NotesId}&color=${data.color}`,data,true,header)   
 
   }
   

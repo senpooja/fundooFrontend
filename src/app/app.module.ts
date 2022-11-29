@@ -21,7 +21,10 @@ import { FormsModule } from '@angular/forms';
 
 
 
+
+
 import { AuthguradServicedService } from './services/authgurad-serviced.service';
+
 
 
 
@@ -40,6 +43,9 @@ import { IconsComponent } from './components/icons/icons.component';
 import { ArchiveComponent } from './components/archive/archive.component';
 import { TrashComponent } from './components/trash/trash.component';
 import { UpdatenoteComponent } from './components/updatenote/updatenote.component';
+import { SearchpipePipe } from './seachPipe/searchpipe.pipe';
+
+
 
 
 
@@ -59,7 +65,11 @@ import { UpdatenoteComponent } from './components/updatenote/updatenote.componen
     IconsComponent,
     ArchiveComponent,
     TrashComponent,
-    UpdatenoteComponent
+    UpdatenoteComponent,
+    SearchpipePipe,
+   
+ 
+
   ],
   imports: [
     BrowserModule,
@@ -79,7 +89,8 @@ import { UpdatenoteComponent } from './components/updatenote/updatenote.componen
     MatCardModule,
     MatDialogModule,
     MatMenuModule,
-    FormsModule
+    FormsModule,
+    
     
 
   ],

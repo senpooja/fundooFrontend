@@ -9,7 +9,7 @@
         </div>
         <h1 class="example-app-name">Fundoo</h1>
         <div class="nosubmit">
-            <input class="nosubmit" type="search" placeholder="Search...">
+            <input class="nosubmit"  (keyup)="searchNote($event)"    type="search" placeholder="Search...">
         </div>
         <div class="cyDiv">
             <div>
@@ -28,8 +28,10 @@
         <div class="appimage">
             <img type="image" src="../../../assets/apps_FILL0_wght400_GRAD0_opsz48.svg" height="30px" width="30px">
 
-            <img type="image" src="../../../assets/account_circle_FILL0_wght400_GRAD0_opsz48.svg" height="28px"
-                width="28px">
+            <img type="image" src="../../../assets/account_circle_FILL0_wght400_GRAD0_opsz48.svg" height="28px" width="28px" class="upper-icon" [matMenuTriggerFor]="menu">
+            <mat-menu #menu>
+                <button  mat-menu-item (click)="Logout()">Logout</button>
+              </mat-menu>
         </div>
 
     </mat-toolbar>
@@ -51,7 +53,7 @@
                 <mat-nav-list>
 
                     <mat-list role="list" class="hide">
-                        <mat-list-item role="listitem">Notes</mat-list-item>
+                        <mat-list-item role="listitem" (click)="Notes()">Notes</mat-list-item>
                         <mat-list-item role="listitem">reminder</mat-list-item>
                         <mat-list-item role="listitem">edit</mat-list-item>
                         <mat-list-item role="listitem" (click)="archiveopen()">archive</mat-list-item>

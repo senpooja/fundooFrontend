@@ -1,6 +1,9 @@
 import { outputAst } from '@angular/compiler';
-import { Component, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { NotesService } from 'src/app/services/noteservice/notes.service';
+import { ArchiveComponent } from '../archive/archive.component';
+import { TrashComponent } from '../trash/trash.component';
 
 @Component({
   selector: 'app-icons',
@@ -9,19 +12,22 @@ import { NotesService } from 'src/app/services/noteservice/notes.service';
 })
 export class IconsComponent implements OnInit {
   @Input() notecard:any;
-  isDelete: boolean = false;
-  isArchiv: boolean=false;
-
+  //isDelete: boolean = false;
+  //isArchiv: boolean=false;
+  @Output() displaytoIcons = new EventEmitter<string>()
   data:any;
-color: any;
+ color: any;
   isDisplaynoteComponent:boolean=false;
-  Trash: boolean = false;
+ Trash: boolean = false;
 
+ isArchive=false;
 
 NotesId:any;
-  constructor(public note : NotesService) {  }
+  constructor(public note : NotesService, private activeRoute:ActivatedRoute) {  }
  
   ngOnInit(): void {
+   
+
   
   
   }
@@ -60,11 +66,15 @@ NotesId:any;
   trash(){
     let req={
     NotesId:[this.notecard.noteID],
+   // Trash:true,
 
     }
     console.log(req)
     this.note.trashnote(req).subscribe((response: any) => {
       console.log(response)
+      this.displaytoIcons.emit(response);
+     
+
 
    
   
@@ -73,17 +83,15 @@ NotesId:any;
   archive(){
     let req={
       NotesId:[this.notecard.noteID],
-
-      
+     //isArchive:true,
     }
     console.log(req)
     this.note.Archiv(req).subscribe((response:any)=>{
       console.log(response)
-    }
-    
-    ) } 
-   
-  
-    }
+    //  this.Archive=false;
+      this.displaytoIcons.emit(response);
+    })
+   } 
+}
 
 

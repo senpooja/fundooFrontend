@@ -23,7 +23,12 @@
 }
 .icondiv{
     width:10px;
+    visibility: hidden;
 }
+.notes:hover .icondiv{
+    width:10px;
+    visibility: visible;
+ }
 
 
 .box{
@@ -43,4 +48,8 @@
    // padding-bottom: 35px;
     margin-left: 90%;
     margin-top: 5%;
+}
+
+.notes:hover{
+    box-shadow: 0.5px 0.5px 0.5px 0.5px rgba(157, 167, 170, 0.215);
 }
